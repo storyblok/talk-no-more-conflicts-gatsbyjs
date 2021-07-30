@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-// Cunstom React 🪝, useStoryblok
+// Custom React 🪝, useStoryblok
 export default function useStoryblok(originalStory, location) {
     let [story, setStory] = useState(originalStory)
 
