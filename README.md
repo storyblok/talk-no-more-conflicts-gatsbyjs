@@ -16,9 +16,9 @@ yarn install
 yarn develop
 ```
 
-Open http://localhost:3000/ in the browser to see the results.
+Open http://localhost:8000/ in the browser to see the results.
 
-> [Gatsby.js' official and community-created starter](https://github.com/gatsbyjs/gatsby-starter-default)
+> [Gatsby.js' official and community-created starter library](https://www.gatsbyjs.com/starters/?)
 
 ## Deploy to Gatsby Cloud
 
