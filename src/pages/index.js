@@ -1,7 +1,7 @@
 import * as React from "react"
 
 import { graphql } from 'gatsby'
-import SbEditable from 'storyblok-react'
+import { sbEditable } from '@storyblok/storyblok-editable'
 // 2. dynamicComponents
 import DynamicComponent from "../components/dynamicComponent"
 // 3. 🪝
@@ -25,12 +25,12 @@ const IndexPage = ({ data, location }) => {
   return (
     <Layout>
       {/* // 3. 🪝 */}
-      <SbEditable content={story.content}>
+      <div {...sbEditable(story.content)}>
         <Seo title="Home" />
         <h1>{ story.name }</h1>
         {/* 2. dynamicComponents */}
         { components }
-      </SbEditable>
+      </div>
     </Layout>
   )
 }
