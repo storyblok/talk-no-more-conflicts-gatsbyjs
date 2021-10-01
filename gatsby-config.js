@@ -36,7 +36,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-storyblok',
       options: {
-        accessToken: 'wLAbTvUxt7yrY4yDk90QwAtt',
+        accessToken: 'Lc5HhxHbvCSTINKhq8BqFQtt',
         version: 'draft',
         languages: ['de', 'at'] // Optional parameter. Omission will retrieve all languages by default.
       }
