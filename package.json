@@ -6,7 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@storyblok/storyblok-editable": "^1.0.0",
-    "gatsby": "^4.0.0-zz-next.1",
+    "gatsby": "^4.2.0",
     "gatsby-plugin-gatsby-cloud": "^4.0.0-zz-next.1",
     "gatsby-plugin-image": "^2.0.0-zz-next.1",
     "gatsby-plugin-manifest": "^4.0.0-zz-next.1",
