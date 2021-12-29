@@ -1,4 +1,15 @@
 import { useEffect, useState } from "react"
+import StoryblokClient from "storyblok-js-client";
+import config from '../../gatsby-config'
+const sbConfig = config.plugins.find((item) => item.resolve === 'gatsby-source-storyblok')
+
+const Storyblok = new StoryblokClient({
+  accessToken: sbConfig.options.accessToken,
+  cache: {
+    clear: "auto",
+    type: "memory",
+  },
+});
 
 // Custom React 🪝, useStoryblok
 export default function useStoryblok(originalStory, location) {
@@ -29,7 +40,19 @@ export default function useStoryblok(originalStory, location) {
         })
 
         storyblokInstance.on(['enterEditmode'], (event) => {
-          // loading the story with the client
+          // loading the draft version on initial view of the page
+          Storyblok
+            .get(`cdn/stories/${event.storyId}`, {
+              version: 'draft',
+            })
+            .then(({ data }) => {
+              if(data.story) {
+                setStory(data.story)
+              }
+            })
+            .catch((error) => {
+              console.log(error);
+            })
         })
       }
     }
@@ -59,6 +82,5 @@ export default function useStoryblok(originalStory, location) {
         addBridge(initEventListeners)
       }
     }, []) // it's important to run the effect only once to avoid multiple event attachment
-
     return story;
 }
