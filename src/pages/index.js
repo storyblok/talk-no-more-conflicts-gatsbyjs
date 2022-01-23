@@ -21,8 +21,8 @@ const IndexPage = ({ data, location }) => {
     <Layout>
       <div {...sbEditable(story.content)}>
         <Seo title="Home" />
-        <h1>{ story.name }</h1>
-        { components }
+        <h1>{story.name}</h1>
+        {components}
       </div>
     </Layout>
   )
