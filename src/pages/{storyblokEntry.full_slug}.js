@@ -24,8 +24,8 @@ export default function StoryblokEntry({ data, location }) {
 }
 
 export const query = graphql`
-  query ($slug: String!) {
-    storyblokEntry(slug: { eq: $slug }) {
+  query ($full_slug: String!) {
+    storyblokEntry(full_slug: { eq: $full_slug }) {
       id
       name
       full_slug
