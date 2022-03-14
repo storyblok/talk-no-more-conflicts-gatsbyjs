@@ -1661,10 +1661,12 @@
     escape-string-regexp "^2.0.0"
     lodash.deburr "^4.1.0"
 
-"@storyblok/storyblok-editable@^1.0.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@storyblok/storyblok-editable/-/storyblok-editable-1.1.0.tgz#a355a9ea149d862db262e41514efaf260fbdfb28"
-  integrity sha512-D/OtU2O2pjK+dZaTnWqyhlpz8jGnzZ+8DkZg7O+FTf/r5612RyO7jzRyEkS/opOyYuyFHtw1NwkSVCvnYURf1A==
+"@storyblok/js@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@storyblok/js/-/js-1.0.3.tgz#cb03b424aef09ed8822146d77493c3f72cf4587c"
+  integrity sha512-pZR835iffl27YkNfc6ntLDl7HOqFkzzXF5PQHsnZSZVLlUtAmy2BDMDShmuLMgLIZNsGLb8rzbKhSdHjB/+woA==
+  dependencies:
+    storyblok-js-client "^4.2.0"
 
 "@szmarczak/http-timer@^1.1.2":
   version "1.1.2"
@@ -9146,6 +9148,11 @@ storyblok-js-client@^4.1.5:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/storyblok-js-client/-/storyblok-js-client-4.2.0.tgz#f1b64b256b071aef14d915e326210a73f18a0259"
   integrity sha512-dAeZfqFrHdxyvGFEVv0glOTxLx1Y2faGN39qeLZLOGCoeK49Xg53hOl8BddxqrjTqTp93GzbqLx04r/hzXrfxA==
+
+storyblok-js-client@^4.2.0:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/storyblok-js-client/-/storyblok-js-client-4.2.1.tgz#6d8d2e16807b4a9ae1ee0d6c1a7ef7bad42b5f48"
+  integrity sha512-TQfsyBJ6WcjpHFGKYXHy5kef4jXOI/j54wrJmw4Ld13e76dr81EvqZIrwehKPTcRID9+a4rbA0ykn3r3aBpArw==
 
 stream-parser@~0.3.1:
   version "0.3.1"

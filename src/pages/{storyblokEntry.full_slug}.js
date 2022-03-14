@@ -1,14 +1,15 @@
 import * as React from "react"
 import { graphql } from 'gatsby'
-import useStoryblok from "../lib/storyblok"
-import { sbEditable } from "@storyblok/storyblok-editable"
+import { useStoryblok } from "../lib/storyblok"
+import { storyblokEditable } from "@storyblok/js";
 import DynamicComponent from "../components/dynamicComponent"
 
 import Layout from "../components/layout"
 
-export default function StoryblokEntry({ data, location }) {
+export default function StoryblokEntry({ data }) {
   let story = data.storyblokEntry
-  story = useStoryblok(story, location)
+  // story.content = JSON.parse(story.content)
+  story = useStoryblok(story)
 
   const components = story.content.body.map(blok => {
     return (<DynamicComponent blok={blok} key={blok._uid} />)
@@ -16,7 +17,7 @@ export default function StoryblokEntry({ data, location }) {
 
   return (
     <Layout>
-      <div {...sbEditable(story.content)}>
+      <div {...storyblokEditable(story.content)}>
         {components}
       </div>
     </Layout>

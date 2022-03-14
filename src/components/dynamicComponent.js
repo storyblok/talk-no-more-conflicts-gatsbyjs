@@ -1,4 +1,4 @@
-import { sbEditable } from '@storyblok/storyblok-editable'
+import { storyblokEditable } from "@storyblok/js";
 import Teaser from './teaser'
 import Grid from './grid'
 import Feature from './feature'
@@ -13,7 +13,7 @@ const Components = {
 const DynamicComponent = ({ blok }) => {
   if (typeof Components[blok.component] !== 'undefined') {
     const Component = Components[blok.component]
-    return (<div {...sbEditable(blok)}><Component blok={blok} /></div>)
+    return (<div {...storyblokEditable(blok)}><Component blok={blok} /></div>)
   }
   return (<p>The component <strong>{blok.component}</strong> has not been created yet.</p>)
 }
