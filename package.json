@@ -6,6 +6,7 @@
   "author": "Arisa Fukuzaki <arisa.fukuzaki@storyblok.com>",
   "dependencies": {
     "@storyblok/js": "^1.0.3",
+    "@storyblok/react": "^1.0.1",
     "gatsby": "^4.2.0",
     "gatsby-plugin-gatsby-cloud": "^4.2.0",
     "gatsby-plugin-image": "^2.2.0",

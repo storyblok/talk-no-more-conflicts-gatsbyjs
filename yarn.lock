@@ -1668,6 +1668,13 @@
   dependencies:
     storyblok-js-client "^4.2.0"
 
+"@storyblok/react@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@storyblok/react/-/react-1.0.1.tgz#7722db13d719c1d1b7bfb0ba6bc14157ee9603b7"
+  integrity sha512-Wsdl8XBolJgNMqQFjhOXzgXEjrHd7MXaMRRUxrFvYdoOVjpBwlzXutGzd6ZiwPHvWqInhc+z+OAOBh3AtA6syw==
+  dependencies:
+    "@storyblok/js" "^1.0.3"
+
 "@szmarczak/http-timer@^1.1.2":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@szmarczak/http-timer/-/http-timer-1.1.2.tgz#b1665e2c461a2cd92f4c1bbf50d5454de0d4b421"

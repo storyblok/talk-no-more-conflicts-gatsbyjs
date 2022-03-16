@@ -1,12 +1,5 @@
 import { useEffect, useState } from "react"
-import { storyblokInit, apiPlugin, useStoryblokBridge } from "@storyblok/js";
-import config from '../../gatsby-config'
-const sbConfig = config.plugins.find((item) => item.resolve === 'gatsby-source-storyblok')
-
-storyblokInit({
-  accessToken: sbConfig.options.accessToken,
-  use: [apiPlugin],
-});
+import { useStoryblokBridge } from "@storyblok/js";
 
 export function useStoryblok(originalStory) {
   const storyCopy = { ...originalStory }

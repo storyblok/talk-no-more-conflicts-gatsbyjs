@@ -1,10 +1,22 @@
 import * as React from "react"
 import { graphql } from 'gatsby'
+
+import { storyblokInit, apiPlugin, StoryblokComponent, storyblokEditable } from "@storyblok/react";
 import { useStoryblok } from "../lib/storyblok"
-import { storyblokEditable } from "@storyblok/js";
-import DynamicComponent from "../components/dynamicComponent"
+import Teaser from '../components/teaser'
+import Grid from '../components/grid'
+import Feature from '../components/feature'
 
 import Layout from "../components/layout"
+
+storyblokInit({
+  use: [apiPlugin],
+  components: {
+    teaser: Teaser,
+    grid: Grid,
+    feature: Feature
+  }
+});
 
 export default function StoryblokEntry({ data }) {
   let story = data.storyblokEntry
@@ -12,7 +24,7 @@ export default function StoryblokEntry({ data }) {
   story = useStoryblok(story)
 
   const components = story.content.body.map(blok => {
-    return (<DynamicComponent blok={blok} key={blok._uid} />)
+    return (<StoryblokComponent blok={blok} key={blok._uid} />)
   })
 
   return (
@@ -34,3 +46,11 @@ export const query = graphql`
     }
   }
 `
+
+export async function config() {
+  return () => {
+    return {
+      defer: true,
+    }
+  }
+}
